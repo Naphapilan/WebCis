@@ -5,7 +5,7 @@ body {
 
 #home, #about, #question {
     background-color: #fff;
-    padding: 70px;
+    padding: 20px;
     margin: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -19,13 +19,37 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 98%;
+    width: 100%;
     padding: 10px;
     background-color: #c4561b;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+
+}
+header h1 {
+    font-size: 24px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* จัดชิดขวา */
+    height: 100%; /* ปรับความสูงให้เต็มหน้าจอ */
+}
+/* ตกแต่งชื่อหัวข้อใหญ่ */
+h1, h2, h4 {
+    color: #FF5722;
+}
+
+/* ตกแต่งรายการ */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
 }
 
 .logo {
@@ -36,11 +60,10 @@ header {
 }
 
 .container {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: auto;
-    height: 60vh; 
-    background-color: #615f5f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ให้ความสูงของ container เท่ากับความสูงของหน้าจอ */
 }
 
 .box {
@@ -104,9 +127,11 @@ header {
 }
   
 .slide img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    /*border: 1px solid #ccc;  เพิ่มเส้นขอบรอบรูป */
     display: block;
+    margin: auto;
 }
   
 input[type="radio"] {
@@ -165,6 +190,10 @@ input[type="radio"]:checked + label {
 #slide8:checked ~ .slides {
     transform: translateX(-700%);
 }
+.slider-container {
+    display: flex;
+    justify-content: center;
+}
 
 
 .styled-table {
@@ -188,7 +217,7 @@ header nav {
     align-items: center;
 }
 nav a {
-    font-size: 18px;
+    font-size: 16px;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -196,14 +225,24 @@ nav a {
     transition: 1s;
 }
 
-nav a:hover,
+nav a:hover {
+    color: #FFC107;
+}
+
 nav a.active {
     color: rgb(255, 230, 0);
+}
+/* ตกแต่งส่วนที่เป็นเนื้อหาหลัก */
+main {
+    padding: 20px;
+    background-color: #f9f9f9;
 }
 img {
     max-width: 100%;
     height: auto;
     /*border: 1px solid #ccc;  เพิ่มเส้นขอบรอบรูป */
+    display: block;
+    margin: auto;
 }
 
 footer {
@@ -213,4 +252,19 @@ footer {
     padding: 10px;
 
 }
+footer a {
+    display: inline; /* ตั้งให้ลิงค์เป็น inline elements */
+    margin: 0 10px; /* กำหนดระยะห่างระหว่างลิงค์ */
+    font-size: 16px; /* ปรับขนาดข้อความลิงค์ตามต้องการ */
+    color: white;
+    text-decoration: none;
+}
+footer img {
+    display: inline; /* ตั้งให้ภาพเป็น inline elements */
+    vertical-align: middle; /* จัดตำแหน่งให้อยู่กลางแนวตั้ง */
+    margin: 0; /* ลบระยะห่างระหว่างภาพ */
+}
 
+footer h4 {
+    font-size: 20px;
+}
