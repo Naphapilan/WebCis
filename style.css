@@ -60,17 +60,47 @@ li {
 }
 
 .container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: auto;
+    height: 60vh; 
+}
+.container .box {
+    text-align: center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh; /* ให้ความสูงของ container เท่ากับความสูงของหน้าจอ */
+    justify-content: center;
+    height: 100%;
+}
+
+.container .box img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.container .box h4,
+.container .box p {
+    margin: 0;
 }
 
 .box {
     flex: 1; 
     padding: 20px;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color:black;
+}
+
+/* ปรับขนาดรูปให้เล็กลง */
+.box img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ปรับระยะห่างของข้อความ */
+.box p {
+    margin-top: 10px;
 }
 
 .container1 {
